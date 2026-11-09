@@ -3,34 +3,29 @@ let control = document.querySelector('#control');
 let stats = document.querySelector('#status');
 let result = document.querySelector('#display');
 
-let powerOn = false;
+let powerOn = true;
 
 function power(e){
-    if(!powerOn) return;
+    if(!powerOn) return; 
     let key = e.currentTarget;
 
-    // Play Audio 
     let audio = key.querySelector('audio');
     audio.currentTime = 0;
     audio.play();
 
-    // Toggle Buttons 
     key.classList.add('active');
     setTimeout(()=>{
         key.classList.remove('active');
     },150);
 
-    // Stats
-    let src = audio.src;
-    let aduioName = src.split('/')[5];
-    result.textContent = aduioName;
-    
+    // Show clip name, e.g. "Heater-1" 
+    result.textContent = key.id;
 }
 
 // Power button toggle 
 control.addEventListener('click', ()=>{
     powerOn = !powerOn; 
-    if(powerOn){
+    if(powerOn){ 
         control.style.background = "green";
         stats.textContent = 'On';
     }else{
@@ -41,21 +36,15 @@ control.addEventListener('click', ()=>{
 })
 
 // Activate Keys
-pads.forEach((items)=>{
-    items.addEventListener('click', power);
+pads.forEach((pad)=>{
+    pad.addEventListener('click', power);
 })
 
-function getKey(e){
-    let key = e.currentTarget.id;
-    return key; 
-}
-// Keyboard 
+// Keyboard - 
 document.addEventListener('keydown', (e) => {
     let key = e.key.toUpperCase();
-    pads.forEach((pad) => {
-         if(key === pad.id.toUpperCase()){
-            console.log(`Matched: ${key}`)
-            power({currentTarget: pad})
-         }
-    });
+    let audio = document.getElementById(key); 
+    if (!audio) return;
+    let pad = audio.parentElement;
+    power({ currentTarget: pad });
 });

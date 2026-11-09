@@ -6,20 +6,21 @@ body{
 
 #pad-bank{
     display: grid;
-    grid-template-columns: repeat(3, 80px); 
+    grid-template-columns: repeat(3, 70px); 
     width: fit-content;
     margin: 40px auto 40px;
     gap: 4px;
 }
 
 .drum-pad{
+    border: none;
     background-color: gray;
     padding: 10px;
     margin: 10px;
     border-radius: 5px;
     color: white;
-    width: 60%;
-    height: 60%;
+    width: 70%;
+    height: 80%;
     
     display: flex;
     justify-content: center;
