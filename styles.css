@@ -1,0 +1,91 @@
+body{
+    background: black;
+    font-family: 'Poppins';
+}
+
+
+#pad-bank{
+    display: grid;
+    grid-template-columns: repeat(3, 80px); 
+    width: fit-content;
+    margin: 40px auto 40px;
+    gap: 4px;
+}
+
+.drum-pad{
+    background-color: gray;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    color: white;
+    width: 60%;
+    height: 60%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.drum-pad:focus-visible{
+    background: rgb(225, 225, 225);
+    color: black;
+}
+
+.drum-pad.active{
+    background-color: #f9af27;
+    border: #ffbf51 ;
+}
+
+#power-container{
+    width: 200px;
+    background: rgb(241, 241, 241); 
+    color: black; 
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 5px;
+}
+
+#control{
+    width: 40px;
+    height: 10px;
+    border-radius: 100px;
+    background: gray;
+    padding: 10px;
+
+    position: relative
+}
+
+#control::after{
+    content: '';
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius: 100%;
+    background: white;
+    padding: 4px;
+
+    top: 5px;
+    left: 5px;
+    transition: 0.5s
+}
+
+#control.on::after{
+    left: 32px;
+    background: rgb(163, 244, 163);
+}
+
+#display{
+    width: 200px;
+    height: 30px; 
+    border-radius: 5px;
+    background: gray; 
+    padding: 10px;
+    margin: 40px auto; 
+    text-align: center;
+    color: white;
+}

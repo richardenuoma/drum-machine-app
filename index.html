@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drum Machine</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="drum-machine">
+      <div id="pad-bank">
+        <div class="drum-pad" id="q">
+          <audio src="https://cdn.freecodecamp.org/curriculum/drum/Heater-1.mp3" class="clip" id="q"></audio>
+          Q
+        </div>
+        <div class="drum-pad" id="w">
+          <audio src="https://cdn.freecodecamp.org/curriculum/drum/Heater-2.mp3" class="clip" id="w"></audio>
+          W
+        </div>
+        <div class="drum-pad" id="e">
+          <audio src="https://cdn.freecodecamp.org/curriculum/drum/Heater-3.mp3" class="clip" id="e"></audio>
+          E
+        </div>
+        <div class="drum-pad" id="a">
+          <audio src="https://cdn.freecodecamp.org/curriculum/drum/Heater-4_1.mp3" class="clip" id="a"></audio>
+          A
+        </div>
+        <div class="drum-pad" id="s">
+          <audio src="https://cdn.freecodecamp.org/curriculum/drum/Heater-6.mp3" class="clip" id="s"></audio>
+          S
+        </div>
+        <div class="drum-pad" id="d">
+          <audio src="https://cdn.freecodecamp.org/curriculum/drum/Dsc_Oh.mp3" class="clip" id="d"></audio>
+          D
+        </div>
+        <div class="drum-pad" id="z">
+          <audio src="https://cdn.freecodecamp.org/curriculum/drum/Kick_n_Hat.mp3" class="clip" id="z"></audio>
+          Z
+        </div>
+        <div class="drum-pad" id="x">
+          <audio src="https://cdn.freecodecamp.org/curriculum/drum/RP4_KICK_1.mp3" class="clip" id="x"></audio>
+          X
+        </div>
+        <div class="drum-pad" id="c">
+          <audio src="https://cdn.freecodecamp.org/curriculum/drum/Cev_H2.mp3" class="clip" id="c"></audio>
+          C
+        </div>
+      </div>
+      <div id="power-container">
+        <p>Power: <span id="status">Off</span></p> 
+        <div id="control">
+        </div>
+      </div>
+
+      <p id="display"></p>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
