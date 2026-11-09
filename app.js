@@ -25,7 +25,7 @@ function power(e){
 // Power button toggle 
 control.addEventListener('click', ()=>{
     powerOn = !powerOn; 
-    if(powerOn){ 
+    if(!powerOn){ 
         control.style.background = "green";
         stats.textContent = 'On';
     }else{
